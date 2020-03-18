@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2a661d6d-dbe3-4b42-be4c-852f469e8f63" name="Default Changelist" comment="" />
+    <list default="true" id="2a661d6d-dbe3-4b42-be4c-852f469e8f63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +19,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -39,9 +45,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/IDEA/ws/datatetrisserver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -115,21 +128,54 @@
       <workItem from="1583574336536" duration="750000" />
       <workItem from="1583575110643" duration="58000" />
       <workItem from="1583894598152" duration="75000" />
+      <workItem from="1584519192378" duration="2245000" />
     </task>
+    <task id="LOCAL-00001" summary="1313">
+      <created>1584519558814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584519558814</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1313" />
+    <option name="LAST_COMMIT_MESSAGE" value="1313" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="295" y="94" key="#Notifications" timestamp="1584519782548">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="295" y="94" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1584519782548" />
     <state x="588" y="244" key="#com.intellij.ide.actions.DebugLogConfigureAction" timestamp="1583574041321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="588" y="244" key="#com.intellij.ide.actions.DebugLogConfigureAction/0.0.1536.824@0.0.1536.824" timestamp="1583574041321" />
-    <state x="554" y="219" key="FileChooserDialogImpl" timestamp="1583894666529">
+    <state x="520" y="5" key="CommitChangelistDialog2" timestamp="1584519552518">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="554" y="219" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1583894666529" />
+    <state x="520" y="5" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584519552518" />
+    <state x="89" y="86" key="DiffContextDialog" timestamp="1584519529774">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="89" y="86" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1584519529774" />
+    <state x="554" y="219" key="FileChooserDialogImpl" timestamp="1584519851584">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="554" y="219" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1584519851584" />
+    <state x="491" y="157" key="RollbackChangesDialog" timestamp="1584519806553">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="491" y="157" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1584519806553" />
+    <state x="295" y="168" key="Vcs.Push.Dialog.v2" timestamp="1584519690651">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="295" y="168" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584519690651" />
     <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1583894600436">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
