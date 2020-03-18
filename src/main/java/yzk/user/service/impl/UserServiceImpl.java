@@ -1,14 +1,9 @@
 package yzk.user.service.impl;
 
-
-
-
 import java.text.SimpleDateFormat;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import redis.clients.jedis.Jedis;
 import yzk.common.pojo.User;
 import yzk.common.utils.MapperUtil;
@@ -34,6 +29,7 @@ public class UserServiceImpl implements UserService {
 			//user.setPassword(MD5Util.md5(user.getPassword()));
 			//正常进入newTicket-userJson
 			String newTicket="";
+		System.out.println("aasa ");
 			try{
 				User exist = userMapper.queryUser(uname,pwd);
 				String loginKey = "login_"+exist.getXh();
