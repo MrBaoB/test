@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yzk.classs.mapper.ClasssMapper">
+	    <insert id="insertClass" parameterType="Classs" >
+	       insert into t_yzk_classs 
+	       ( 
+	         njmc,
+	         xi,
+	         zymc,
+	         bjmc
+	       )
+	       values
+	       (
+	         #{njmc},
+	         #{xi},
+	         #{zymc},
+	         #{bjmc}
+	       )
+	    </insert>
+	    <select id="selectDataGrade" resultType="java.lang.String">
+	       select DISTINCT njmc  from  t_yzk_classs 
+	    </select>
+	    
+	    <select id="selectDataXi" parameterType="string" resultType="java.lang.String">
+	       select DISTINCT xi  from t_yzk_classs WHERE njmc=#{cxnj} 
+	    </select>
+	    
+	    <select id="selectDataZhuanYe" parameterType="string" resultType="java.lang.String">
+	       select DISTINCT zymc  from t_yzk_classs WHERE njmc=#{cxnj}  and  xi=#{cxxi}
+	    </select>
+	    
+	    <select id="selectDataBj" parameterType="string" resultType="java.lang.String">
+	       select DISTINCT bjmc  from t_yzk_classs
+	    </select>
+	    <select id="countBan" resultType="long">
+		select count(id) from t_yzk_classs
+	    </select>
+	    <select id="searchBanJi" resultType="yzk.common.pojo.Classs">
+			select * from t_yzk_classs
+			 <where>
+			 	<if test="nianji != null and nianji !='' ">
+					 and njmc = #{nianji}
+				</if> 
+				<if test="xi != null and xi !='' ">
+					 and xi = #{xi}
+				</if> 
+				<if test="zhuanye != null and zhuanye !='' ">
+					 and  zymc = #{zhuanye}
+				</if> 
+			  </where>					
+			  limit #{start},#{size}
+	    </select>
+	    <delete id="deleteById" parameterType="integer">
+	           delete  from t_yzk_classs where id = #{id}
+	    </delete>
+	    
+</mapper> 
+
+
+
+
+
+
+
+
+
+
+
+

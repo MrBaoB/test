@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="yzk-common-resource" />
+        <module name="yzk-upload" />
+        <module name="yzk-zuul" />
+        <module name="yzk-download" />
+        <module name="yzk-user" />
+        <module name="yzk-teacher-client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="yzk-common-resource" target="1.8" />
+      <module name="yzk-download" target="1.8" />
+      <module name="yzk-parent" target="1.8" />
+      <module name="yzk-teacher-client" target="1.8" />
+      <module name="yzk-upload" target="1.8" />
+      <module name="yzk-user" target="1.8" />
+      <module name="yzk-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

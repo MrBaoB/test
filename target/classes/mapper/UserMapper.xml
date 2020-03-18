@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yzk.user.mapper.UserMapper">
+	<select id="countUser" resultType="long">
+		select count(id) from t_yzk_user;
+	</select>
+	<select id="queryUser" parameterType="String"
+	resultType="User">
+	select * from t_yzk_user where xh=#{uname} and mm=#{pwd}
+	</select>
+	<select id="userListPwd" resultType="yzk.common.pojo.User">
+		select * from t_yzk_user u,t_yzk_classs c
+		 <where>
+		    u.bjid=c.id
+		 	<if test="xh != null and xh !='' ">
+				and xh = #{xh}
+			</if>
+		 </where>					
+		limit #{start},#{size}
+	</select>
+	<update id="pwdEditManage">
+		update t_yzk_user
+		set mm=#{mm}
+		where id=#{id}
+	</update>
+	<select id="countStu" resultType="long">
+		select count(u.id) from t_yzk_user u,t_yzk_classs c
+		<where>	 
+			jsid=2	and u.bjid=c.id 
+		 	<if test="nianji != null and nianji !='' ">
+				 and njmc = #{nianji}
+			</if>
+			<if test="xi != null and xi !='' ">
+				 and xi = #{xi}
+			</if>
+			<if test="zhuanye != null and zhuanye !='' ">
+				 and zymc = #{zhuanye}
+			</if>
+			<if test="banji != null and banji !='' ">
+				 and bjmc = #{banji}
+			</if>
+		 	<if test="xh != null and xh !='' ">
+				 and xh = #{xh}
+			</if>			
+		 </where>		
+	</select>
+	<select id="stuAllList" resultType="yzk.user.formEntity.UserEntity">
+		select DISTINCT u.id,r.js,u.xh,u.nm,u.zsxm,u.xb,u.phone,u.email,u.tx,c.bjmc from t_yzk_user u,t_yzk_role r,t_yzk_classs c
+		 <where>
+		 	 u.bjid=c.id and u.jsid=r.id and  r.id=2
+		 	
+		 	<if test="nianji != null and nianji !='' ">
+				 and njmc = #{nianji}
+			</if>
+			<if test="xi != null and xi !='' ">
+				 and xi = #{xi}
+			</if>
+			<if test="zhuanye != null and zhuanye !='' ">
+				 and zymc = #{zhuanye}
+			</if>
+			<if test="banji != null and banji !='' ">
+				 and bjmc = #{banji}
+			</if>
+		 	<if test="xh != null and xh !='' ">
+				 and xh = #{xh}
+			</if>			
+		 </where>					
+		limit #{start},#{size}
+	</select>
+	<select id="countTea" resultType="long">
+		select count(u.id) from t_yzk_user u,t_yzk_role r
+		<where>	 
+			 u.jsid=r.id and jsid != 2
+		 	<if test="js != null and js !='' ">
+				 and jsid = #{js}
+			</if>
+		 	<if test="xh != null and xh !='' ">
+				 and xh = #{xh}
+			</if>			
+		 </where>		
+	</select>
+	<select id="teaAllList" resultType="yzk.user.formEntity.UserEntity">
+		select DISTINCT u.id,r.js,u.xh,u.nm,u.zsxm,u.xb,u.phone,u.email,u.tx from t_yzk_user u,t_yzk_role r
+		 <where>
+		 	 u.jsid=r.id and jsid != 2		 	
+		 	<if test="js != null and js !='' ">
+				 and jsid = #{js}
+			</if>
+		 	<if test="xh != null and xh !='' ">
+				 and xh = #{xh}
+			</if>			
+		 </where>					
+		limit #{start},#{size}
+	</select>
+	<delete id="deleteID" parameterType="integer">
+		delete from t_yzk_user where id = #{id}
+	</delete>
+	<select id="getClassId" resultType="yzk.user.formEntity.BjEntity" parameterType="string">
+		select id form t_yzk_classs where bjmc=#{bj}
+	</select>
+	<update id="editStu">
+	 update t_yzk_user
+	  <trim prefix="set" suffixOverrides=",">
+	  		<if test=" xh!=null and xh != '' ">
+	 		xh=#{xh}
+	 	</if>
+	 	<if test=" zsxm != null and zsxm != '' ">
+	 		zsxm=#{zsxm}
+	 	</if>
+	 	<if test=" xb != null and xb != '' ">
+	 		xb=#{xb}
+	 	</if>
+	 	<if test=" bjid != null and bjid != '' ">
+	 		bjid=#{bjid}
+	 	</if>
+	  </trim>
+
+	 where id=#{id}
+	</update>
+	<update id="editTea">
+	 update t_yzk_user
+	 <trim prefix="set" suffixOverrides=",">
+	 	<if test=" xh != null and xh != '' ">
+	 		xh=#{xh}
+	 	</if>
+	 	<if test=" zsxm != null and zsxm != '' ">
+	 		zsxm=#{zsxm}
+	 	</if>
+	 	<if test=" xb != null and xb != '' ">
+	 		xb=#{xb}
+	 	</if>
+	 </trim>
+	 where id=#{id}
+	</update>
+	<insert id="addTea">
+		insert into t_yzk_user
+		(xh,jsid,zsxm,xb)
+		values
+		(#{xh},#{jsid},#{zsxm},#{xb})
+	</insert>
+	<insert id="addStu">
+		insert into t_yzk_user
+		(xh,jsid,zsxm,xb,bjid)
+		values
+		(#{xh},#{jsid},#{zsxm},#{xb},{bjid})
+	</insert>
+</mapper> 

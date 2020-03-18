@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../yzk-common-resource/yzk-common-resource.iml" filepath="$PROJECT_DIR$/../yzk-common-resource/yzk-common-resource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yzk-download/yzk-download.iml" filepath="$PROJECT_DIR$/../yzk-download/yzk-download.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yzk-parent/yzk-parent.iml" filepath="$PROJECT_DIR$/../yzk-parent/yzk-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yzk-teacher-client/yzk-teacher-client.iml" filepath="$PROJECT_DIR$/../yzk-teacher-client/yzk-teacher-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yzk-upload/yzk-upload.iml" filepath="$PROJECT_DIR$/../yzk-upload/yzk-upload.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yzk-user.iml" filepath="$PROJECT_DIR$/yzk-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../yzk-springcloud-zuul/yzk-zuul.iml" filepath="$PROJECT_DIR$/../yzk-springcloud-zuul/yzk-zuul.iml" />
+    </modules>
+  </component>
+</project>
