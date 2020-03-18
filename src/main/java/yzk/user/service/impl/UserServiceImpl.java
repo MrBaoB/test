@@ -20,7 +20,6 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserMapper userMapper;
 
-
 	//redis登录
 	public SysResult doLogin(String uname,String pwd) {
 		SysResult sysResult=new SysResult();
